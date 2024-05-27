@@ -39,7 +39,7 @@
                     <p>Add Student to the dormitory.</p>
                 </div>
                 <?php
-                    check_login_errors();
+                    check_signup_errors();
                 ?>
                 <form action="includes/signup_student/signup_student.inc.php" method="post">
                     <div class="input-group mb-2">

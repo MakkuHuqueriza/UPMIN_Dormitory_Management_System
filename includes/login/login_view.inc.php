@@ -16,5 +16,7 @@ function check_login_errors() {
     } else if (isset($_GET['login']) && $_GET['login'] === "success") {
         echo '<br>';
         echo '<p class="form-success">Login successful!</p>';
+
+        header("refresh:2;url=/regis.php");
     }
 }

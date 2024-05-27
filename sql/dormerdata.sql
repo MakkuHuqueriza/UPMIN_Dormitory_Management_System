@@ -1,8 +1,8 @@
 -- Table structure for table 'dormers' , preliminary for server.
 
 CREATE TABLE dormers ( 
-    studentnum varchar(10) NOT NULL, 
-    pwd varchar(255) NOT NULL,
+    studentnum VARCHAR(10) NOT NULL, 
+    pwd VARCHAR(255) NOT NULL,
     studentname VARCHAR(255),
     age INT,
     sex VARCHAR(10),
