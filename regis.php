@@ -48,7 +48,7 @@
                 <div class="row mb-3">
                     <div class="col-md">
                         <div class="input-group">
-                            <input type="text" name="studentnum" class="form-control form-control-lg bg-light fs-6" placeholder="Student Number">
+                            <input type="text" name="studentnum" class="form-control form-control-lg bg-light fs-6" placeholder="Student Number" value= <?php echo $_SESSION["user_username"] ?> readonly>
                         </div>
                     </div>
                     <div class="col">

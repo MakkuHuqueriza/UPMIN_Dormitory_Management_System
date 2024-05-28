@@ -30,7 +30,7 @@
             </div>
         </div>
 
-    <!-------------------- ------ Right Box ---------------------------->
+    <!-------------------------- Right Box ---------------------------->
         
         <div class="col-md-6 right-box">
             <div class="row align-items-center">
