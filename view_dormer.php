@@ -1,3 +1,9 @@
+<?php
+    require_once "includes/config_session.inc.php";
+    require_once "includes/search_dormer/search_dormer_view.inc.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,18 @@
 <body>
     <h3>View Dormers</h3>
 
-    
+    <?php
+        require_once 'includes/view_dormer/view_dormer.inc.php'
+    ?>
 
+    <h3>Search Dormer</h3>
+    <form action="includes/search_dormer/search_dormer.inc.php" method="post">
+        <input type="text" name="search_dormer" placeholder="Input Student Number">
+        <button type="submit">Search</button>
+    </form>
+
+    <?php
+        check_search_errors();
+    ?>
 </body>
 </html>

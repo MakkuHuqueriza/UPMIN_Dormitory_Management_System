@@ -71,3 +71,32 @@ body{
     text-align: center;
 }   
 
+.dormer {
+    height: auto;
+    width: 100vw;
+    table-layout: fixed;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.dormer td {
+    width: 1fr;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.dormer tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.dormer tr:hover {
+    background-color: #ddd;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
