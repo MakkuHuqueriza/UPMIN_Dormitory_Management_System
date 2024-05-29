@@ -1,0 +1,332 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Registration Form</title>
+            <link href="landing.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <div id="logobar">
+                    <a href="#" class="upLogo"><img src="images/UP Logo.png" alt="UP Logo" class="logoImage"></a>
+                    <a href="#" class="upLogo"><img src="images/UP Min Logo.png" alt="UP Logo" class="logoImage"></a>
+                    <a href="#" class="uniName">University of The Philippines</a>            
+                </div>
+            </header>
+            <div class="navbar">
+                <h1> UPMin Dormitory Management System </h1>
+                <div class="dropdown">
+                    <a href="#"><i class="fas fa-link"></i>Quick Links</a>
+                    <div class="dropdown-content">
+                        <a href="https://csrs.up.edu.ph" target="_blank">CSRS</a>
+                        <a href="https://canvas.up.edu.ph" target="_blank">Canvas</a>
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="slideToggle">
+            <label for="slideToggle" class="toggleSlideBar">
+                <span class="topLine common"></span>
+                <span class="middleLine common"></span>
+                <span class="bottomLine common"></span>
+            </label>
+
+            <div class="slidebar">
+                <h1>Dashboard</h1>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                    <li><a href="#"><i class="fa-solid fa-building"></i></i>Staffs</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                </ul>
+
+                <div class="sliderBottomIcons">
+                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Log-Out </a>
+                </div>
+            </div>
+
+            <section class="landing">
+                <div class="landingPic">
+                    <img src="images/ebl-dormitory.jpg" alt="Elias B. Lopez Dormitory">
+                    <div class="landingContent">
+                        <p>Welcome to</p>
+                        <h1>UPMIN Dormitory Management System</h1>
+                        <button id="Button">Button Something</button>   
+                    </div>
+                    <div class="gradient"></div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <div class="container">
+                    <div class="contents-wraper">
+                        <section class="header"><h1>"What the dormers say?"</h1></section>
+                        <section class="testRow">
+                            
+                            <div class="testItem active">
+                                <img src="images/Deniel.png">
+                                <h3>Deniel Dave Natividad</h3>
+                                <h4>1st-Year BSCS</h4>
+                                <p>“The EBL Dorm is very accomodating. I am strong. RESPECT THE GRIND”</p>
+                            </div>
+                
+                            <div class="testItem">
+                                <img src="model-2.jpg">
+                                <h3>Cristieneil Ceballos</h3>
+                                <h4>1st-Year BSCS</h4>
+                                <p>“I recommend EBL to students who want to save on living costs since it is student-friendly.”</p>
+                            </div>
+                
+                            <div class="testItem">
+                                <img src="images/Apolinario.jpg">
+                                <h3>Johnric Apolinario</h3>
+                                <h4>1st-Year BSCS</h4>
+                                <p>“I really like EBL especially the Dorm Managers. They are very kind especially Ma'am.”</p>
+                            </div>
+                
+                            <div class="testItem">
+                                <img src="images/Bautista.jpg">
+                                <h3>Gabrielle Xiane Bautista</h3>
+                                <h4>1st-Year BSCS</h4>
+                                <p>“efwfffweuat.”</p>
+                            </div>
+                
+                            <div class="testItem">
+                                <img src="model-5.jpg">
+                                <h3>Renz Jaepril Mongaya</h3>
+                                <h4>1st-Year BSCS</h4>
+                                <p>“The rooms in the dorms are spacious, and the rent is very affordable. The place is also very secure due to its tight security.”
+                            </div>
+                        </section>
+                
+                        <section class="indicators">
+                            <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='4' onclick="switchTest(this)"></div>
+                        </section>
+                    </div>
+                </div>
+            </section>    
+
+            <section class="announcements">
+                <!-- <div class="timeline-container">
+                    <div class="timeline-header">
+                        <div class="time-range" id="timeRangeText">Next 7 days</div>
+                        <div class="filter-icon" onclick="toggleDropdown()">&#x25BC;</div>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" data-range="Next 7 days" onclick="updateTimeRange(event)">Next 7 days</a>
+                        <a href="#" data-range="Next 30 days" onclick="updateTimeRange(event)">Next 30 days</a>
+                        <a href="#" data-range="All time" onclick="updateTimeRange(event)">All time</a>
+                    </div>
+                    <div class="announcement">Announcements</div>
+                </div> -->
+            </section>
+            
+            <section class="greetings">    
+                <div class="content">
+                    <h1>Greetings!!!</h1>
+                    <p> idhaiwhdiowahdaw doad oiodahdibawod oidbabdbadbadbabdaoidhbaadbaidbuaiwdauwdad awd adadadadad</p>
+                </div>
+                <div class="pic-container">
+                    <img src="images/homePicture.png">
+                </div>
+            </section>
+
+            <section class="values">
+                <div class="vision-container">
+                    <h1> Vision </h1>
+                    <p> dnaindanwdiddaoidnandanaind </p>
+                </div>
+                <div class="mission-container">
+                    <h1> Mission </h1>
+                    <p> dnaindanwdiddaoidnandanaind </p>
+                </div>
+                <div class="goal-container">
+                    <h1> Goals </h1>
+                    <p> dnaindanwdiddaoidnandanaind </p>
+                </div>
+            </section>
+
+            <footer>
+                <div class="left-footer">
+                    <h2> Mailing Address: </h2>
+                    <ul>
+                        <li> Elias B. Lopez Dormitory </li>
+                        <li> University of The Philippines</li>
+                        <li>Davao City, Davao del Sur, Philippines, 8000</li>
+                    </ul>
+                    <h2> Telephone Number: 09246308336 </h2>
+                    <h2> Email: ebl@up.edu.ph </h2>
+                </div>
+                <div class="middle-footer">
+                    <div class="footer-logos">
+                        <img src="images/UP Logo.png" alt="UP Logo" class="logoImage">
+                        <img src="images/UP Min Logo.png" alt="UP Logo" class="logoImage">
+                    </div>
+                    <h3> &copy; 2024 University of The Philippines, All Rights Reserved<h3>
+                </div>
+                <div class="right-footer">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+                const slideToggle = document.getElementById('slideToggle');
+                const toggleSlideBar = document.querySelector('.toggleSlideBar');
+                const slidebar = document.querySelector('.slidebar');
+                const navbar = document.querySelector('.navbar');
+                const logobar = document.querySelector('header');
+                let lastScrollTop = 0;
+
+                toggleSlideBar.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    slideToggle.checked = !slideToggle.checked;
+                    if (slideToggle.checked) {
+                        slidebar.style.transform = 'translateX(0)';
+                        slidebar.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.5)';
+                    } else {
+                        slidebar.style.transform = 'translateX(-15em)';
+                        slidebar.style.boxShadow = 'none';
+                    }
+                });
+
+                window.addEventListener("scroll", function() {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    var navbarTop = 64;
+                    var toggleSlideBarTop = 80;
+                    var slidebarTop = 64;
+
+                    // Hide or show logobar
+                    if (scrollTop > lastScrollTop) {
+                        logobar.style.top = "-3.5em";
+                    } else {
+                        logobar.style.top = "0";
+                    }
+
+                    // Hide or show navbar, toggleSlideBar, and slidebar
+                    if (scrollTop > lastScrollTop) {
+                        // Scrolling down
+                        if (scrollTop > navbarTop) {
+                            navbar.style.top = "0";
+                        }
+                        if (scrollTop > toggleSlideBarTop) {
+                            toggleSlideBar.style.top = "1em";
+                        }
+                        if (scrollTop > slidebarTop) {
+                            slidebar.style.top = "0";
+                        }
+                    } else {
+                        // Scrolling up
+                        if (scrollTop <= navbarTop) {
+                            navbar.style.top = "4em";
+                        }
+                        if (scrollTop <= toggleSlideBarTop) {
+                            toggleSlideBar.style.top = "80px";
+                        }
+                        if (scrollTop <= slidebarTop) {
+                            slidebar.style.top = "4em";
+                        }
+                    }
+                    lastScrollTop = scrollTop;
+                });
+
+                // function toggleDropdown() {
+                //     var dropdown = document.getElementById('dropdownMenu');
+                //     dropdown.classList.toggle('active');
+                // }
+
+                // function updateTimeRange(event) {
+                //     event.preventDefault();
+                //     var selectedRange = event.target.getAttribute('data-range');
+                //     document.getElementById('timeRangeText').innerText = selectedRange;
+                //     toggleDropdown();
+                // }
+
+                // document.querySelector('.filter-icon').addEventListener('click', toggleDropdown);
+
+                // document.querySelectorAll('.dropdown-menu a').forEach(function(anchor) {
+                //     anchor.addEventListener('click', updateTimeRange);
+                // });
+
+                document.getElementById('Button').addEventListener('click', function() {
+                    alert('Button clicked!');
+                });
+            });
+
+            // Access the testimonials
+                let testSlide = document.querySelectorAll('.testItem');
+                // Access the indicators
+                let dots = document.querySelectorAll('.dot');
+
+                var counter = 0;
+
+                // Add click event to the indicators
+                function switchTest(currentTest){
+                    currentTest.classList.add('active');
+                    var testId = currentTest.getAttribute('attr');
+                    if(testId > counter){
+                        testSlide[counter].style.animation = 'next1 0.8s ease-in forwards';
+                        counter = testId;
+                        testSlide[counter].style.animation = 'next2 0.8s ease-in forwards';
+                    }
+                    else if(testId == counter){return;}
+                    else{
+                        testSlide[counter].style.animation = 'prev1 0.8s ease-in forwards';
+                        counter = testId;
+                        testSlide[counter].style.animation = 'prev2 0.8s ease-in forwards';
+                    }
+                    indicators();
+                }
+
+                // Add and remove active class from the indicators
+                function indicators(){
+                    for(i = 0; i < dots.length; i++){
+                        dots[i].className = dots[i].className.replace(' active', '');
+                    }
+                    dots[counter].className += ' active';
+                }
+
+                // Code for auto sliding
+                function slideNext(){
+                    testSlide[counter].style.animation = 'next1 0.8s ease-in forwards';
+                    if(counter >= testSlide.length - 1){
+                        counter = 0;
+                    }
+                    else{
+                        counter++;
+                    }
+                    testSlide[counter].style.animation = 'next2 0.8s ease-in forwards';
+                    indicators();
+                }
+                function autoSliding(){
+                    deleteInterval = setInterval(timer, 3000);
+                    function timer(){
+                        slideNext();
+                        indicators();
+                    }
+                }
+                autoSliding();
+
+                // Stop auto sliding when mouse is over the indicators
+                const container = document.querySelector('.indicators');
+                container.addEventListener('mouseover', pause);
+                function pause(){
+                    clearInterval(deleteInterval);
+                }
+
+                // Resume sliding when mouse is out of the indicators
+                container.addEventListener('mouseout', autoSliding);
+            </script>
+        </body>
+    </html>
