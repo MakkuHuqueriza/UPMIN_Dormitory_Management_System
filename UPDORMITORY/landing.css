@@ -7,6 +7,39 @@
         outline: none;
         border: none;   
         list-style: none;
+    }  
+
+    /* latin-ext */
+    @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin-ext */
+    @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
     /* scrollbar */
@@ -26,6 +59,7 @@
 
     body{
         background-color: #7b1113;
+        font-family: Poppins;
     }
 
     /* header */
@@ -67,7 +101,7 @@
     .navbar {
         position: fixed;
         top: 4em;
-        height: 4.1em;
+        height: 4.5em;
         width: 100%;
         left: 0;
         background-color: #e8e8e8;
@@ -168,7 +202,6 @@
         pointer-events: auto;
     }
 
-
     /* slidebar */
     .slidebar {
         top: 4em;
@@ -185,7 +218,7 @@
     }
 
     .slidebar i{
-        padding-right: 1em;
+        padding-right: 0.8em;
     }
 
     .slidebar ul {
@@ -196,21 +229,24 @@
 
     .slidebar h1 {
         font-size: 1.5em;
-        padding: 0.78em 0;
+        padding: 0.72em 0;
         font-weight: 600;
         text-align: center;
-        border-bottom: #228B22 1px solid;
+        border-bottom: #228B22 0.07em solid;
+    }
+
+    .slidebar a{
+        color: #3f3c3c;
     }
 
     .slidebar ul a {
         display: block;
-        padding: 1em;
-        color: #3f3c3c;
         text-align: center;
         font-size: 1.2em;
+        padding: 1em;
     }
 
-    .slidebar a:hover{
+    .slidebar ul a:hover{
         background-color: #7b1113;
         color: #e8e8e8;
         transition: 0.3s ease-in-out;
@@ -219,17 +255,21 @@
     .sliderBottomIcons {
         height: 3em;
         border-top: #218838 1px solid;
-        padding-bottom: 1em;
+        padding-bottom: 2.5em;
         padding-top: 1em;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .sliderBottomIcons a{
+        padding: 0em;
     }
 
     .toggleSlideBar {
         position: fixed;
         height: 30px;
         width: 30px;
-        top: 80px;
+        top: 85px;
         left: 15px;
         z-index: 1003;
         cursor: pointer;
@@ -656,10 +696,12 @@
         font-size: 30px;
         font-style: italic;
         padding: 7px;
+        color: #7b1113;
     }
 
     .testRow .testItem h4{
         font-style: italic;
+        color: #dd8f25;
     }
 
     .testRow .testItem p{
