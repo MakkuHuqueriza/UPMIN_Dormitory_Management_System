@@ -12,7 +12,15 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
-<body>
+<body onload="hideSpinner()">
+
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+        </div>
+    </div>
     
     <!----------------------- Main Container -------------------------->
 
@@ -49,7 +57,7 @@
                         <input type="password" name="pwd" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
                     </div>
                     <div class="input-group mb-4">
-                        <button name="login" class="btn btn-lg btn-outline-success w-100 fs-6 mb-2 ">Login</button>
+                        <button name="login" class="btn btn-lg btn-outline-success w-100 fs-6 mb-2 " >Login</button>
                         <button class="btn btn-outline-dark w-100 fs-6 btn-sm">Back to Home</button> <!-- Add link to home -->
                     </div>
                 </form>
@@ -57,5 +65,6 @@
         </div> 
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 </html>

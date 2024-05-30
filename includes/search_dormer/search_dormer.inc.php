@@ -2,7 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $search_dormer = $_POST['search_dormer'];
+    $search_dormer = $_POST['studentnum'];
 
     try {
         require_once '../dbh.inc.php';
@@ -28,6 +28,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         $results = search_dormer($pdo, $search_dormer);
+
+
+        if(!$results) {
+            $errors["no_dormer_found"] = "No dormer found!";
+            $_SESSION["errors_search"] = $errors;
+
+            header("Location: /view_dormer.php");
+            die();
+        }
 
         $_SESSION["results"] = $results;
 

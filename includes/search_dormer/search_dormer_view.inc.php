@@ -19,30 +19,8 @@ function check_search_errors() {
 function show_search_results() {
 
     $results = $_SESSION["results"];
-
-    echo "<br>";
     
-    echo "<table class='dormer'>";
-    echo "<tr>";
-    echo "<td><b>STUDENT NUMBER</b></td>"; 
-    echo "<td><b>STUDENT NAME</b></td>";
-    echo "<td><b>AGE</b></td>";
-    echo "<td><b>SEX</b></td>";
-    echo "<td><b>PROGRAM</b></td>";
-    echo "<td><b>YEAR LEVEL</b></td>";
-    echo "<td><b>BIRTHDATE</b></td>";
-    echo "<td><b>PLACE OF BIRTH</b></td>";
-    echo "<td><b>RELIGION</b></td>";
-    echo "<td><b>EMAIL ADDRESS</b></td>";
-    echo "<td><b>PHONE NUMBER (+63)</b></td>";
-    echo "<td><b>HOME ADDRESS</b></td>";
-    echo "<td><b>CREATED AT</b></td>";
-    echo "<td><b>UPDATED AT</b></td>";
-    echo "</tr>";
-    echo "</table>";
-
-    echo "<table class='dormer'>";
-    echo "<tr>";
+    echo '<tr class="highlight">';
     echo "<td>" . htmlspecialchars($results[0]['studentnum']) . "</td>"; 
     echo "<td>" . htmlspecialchars($results[0]['studentname']) . "</td>";
     echo "<td>" . htmlspecialchars(strval($results[0]['age'])) . "</td>";
@@ -57,8 +35,11 @@ function show_search_results() {
     echo "<td>" . htmlspecialchars($results[0]['homeaddress']) . "</td>";
     echo "<td>" . htmlspecialchars($results[0]['create_at']) . "</td>";
     echo "<td>" . htmlspecialchars($results[0]['update_at']) . "</td>";
-    echo "</tr>";
-    echo "</table>";
+    echo '<td>';
+    // echo '<a href="edit.php?studentnum=' . urlencode($row['studentnum']) . '" class="edit-action"><i class="lni lni-pencil-alt"></i></a>';
+    echo '<button type="button" class="btn btn-danger delete-action" onclick="deleteStudent(\'' . $results[0]['studentnum'] . '\')"><i class="lni lni-trash-can"></i></button>';
+    echo '</td>';
+    echo '</tr>';
 
     unset($_SESSION["results"]);
 }

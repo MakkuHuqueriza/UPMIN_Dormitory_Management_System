@@ -44,13 +44,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         $_SESSION["user_id"] = $result["studentnum"];
         $_SESSION["user_username"] = htmlspecialchars($result["studentnum"]);
+        $_SESSION["valid"] = true;
 
         $_SESSION["last_regeneration"] = time();
 
-        header("Location: /login.php?login=success");
-
         $pdo = null;
         $stmt = null;
+
+        if($studentnum == "admin") {
+
+            header("Location: /view_dormer.php");
+            
+            die();
+        }
+
+        header("Location: /login.php?login=success");
 
         die();
 

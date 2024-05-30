@@ -7,7 +7,9 @@ function check_login_errors() {
         $errors = $_SESSION["errors_login"];
 
         echo "<br>";
+
         
+
         foreach($errors as $error) {
             echo '<p class="form-error">' . $error . '</p>';
         }
@@ -15,7 +17,6 @@ function check_login_errors() {
         unset($_SESSION["errors_login"]);
     } else if (isset($_GET['login']) && $_GET['login'] === "success") {
         echo '<br>';
-        echo '<p class="form-success">Login successful!</p>';
 
         header("refresh:2;url=/regis.php");
     }
