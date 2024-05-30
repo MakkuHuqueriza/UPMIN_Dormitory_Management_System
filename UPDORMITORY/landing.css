@@ -1,4 +1,4 @@
-    /* all */
+ /* all */
     * {
         margin: 0;
         padding: 0;
@@ -40,6 +40,11 @@
     font-weight: 500;
     src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    html {  
+        scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 
     /* scrollbar */
@@ -174,7 +179,7 @@
         display: none;
         position: absolute;
         background-color: #e8e8e8;
-        width: 10em; 
+        width: 8.6em; 
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         border-radius: 5px;
@@ -254,7 +259,7 @@
 
     .sliderBottomIcons {
         height: 3em;
-        border-top: #218838 1px solid;
+        border-top: #0a4424 1px solid;
         padding-bottom: 2.5em;
         padding-top: 1em;
         display: flex;
@@ -493,6 +498,7 @@
     } */
 
     .greetings{
+        margin-top: 6.9rem;
         height: 34em;
         width: 100%;
         background-color: #f4f4f4;
@@ -512,7 +518,8 @@
 
     .content h1{
         color: #7b1113;
-        padding: 0.7em;
+        padding-left: 0.25em;
+        font-size: 3em;
     }
 
     .content p{
@@ -566,6 +573,10 @@
         height: 4em;
     }
 
+    .middle-footer{
+        text-align: center;
+    }
+
     .right-footer a{
         color: #f4f4f4;
         font-size: 1.1em;
@@ -585,7 +596,7 @@
     }
 
     .vision-container, .mission-container, .goal-container{
-        height: 30em;
+        height: 35em;
         width: 33.33%;
         display: flex;
         flex-direction: column;
@@ -593,8 +604,6 @@
         justify-content: center;
         color: #f4f4f4;
         padding: 2em;
-        border: #0a4424 2px solid;
-
     }
 
     .vision-container > *, .mission-container > *, .goal-container > *{
@@ -616,7 +625,7 @@
 
     /* try */
     .testimonials{
-        margin-top: 6.9rem;
+        margin-top: 5rem;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -769,3 +778,120 @@
             left: 0%;
         }
     }
+
+/* Card */
+.creators, .about{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 40em;
+    width: 100%;
+    background-color: #7b1113;
+    margin-top: 2em;
+}
+
+.about h1{
+    font-size: 2.5em;
+    color: #e8e8e8;
+}
+
+.card-container {
+   position: relative;
+   width: 33%;
+   height: 40em;
+   background: #7b1113;
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+.card-container .circle-container {
+   position: absolute;
+   top: 1.5em;
+   left: 50%;
+   width: 25em; 
+   height: 25em; 
+   transform: translateX(-50%); 
+   clip-path: circle();
+}
+
+.card-container .circle-container::before {
+   content: '';
+   position: absolute;
+   top: -8px;
+   left: -16px;
+   width: 100%;
+   height: 100%;
+   box-shadow: 0 0 0 20px #0a4424;
+   border-radius: 50%;
+   z-index: 2;
+   pointer-events: none;
+}
+
+.circle-container .imgBox {
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   width: 25em; 
+   height: 25em; 
+}
+
+.imgBox img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s;
+}
+
+.card-container img:hover {
+   transform: scale(1.2);
+}
+
+.card-container .creator-content {
+   position: absolute;
+   left: 0;
+   bottom: 5em;
+   width: 100%;
+   height: 140px;
+   padding: 18px 30px;
+}
+
+.creator-content .fa-facebook {
+   padding: 0.15em 0.15em;  
+   color: #0077b5;
+   background:#fff;
+   border-radius: 1em;
+}
+
+.creator-content h3 {
+   font-size: 1.4em;
+   color: #e8e8e8;
+   margin-top: 7px;
+   margin-bottom: 2px;
+}
+
+.creator-content .textIcon {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.creator-content .textIcon h4 {
+   color: #dd8f25;
+   font-weight: 400;
+}
+
+.creator-content .description {
+   margin-top: 10px;
+}
+
+.creator-content .description p {
+   font-size: 1em;
+   color: #f9f9f8;
+   line-height: 1.5em;
+}
