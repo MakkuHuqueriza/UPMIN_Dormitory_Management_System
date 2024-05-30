@@ -418,91 +418,13 @@
         background-color:#7b1113 ;
     }
 
-    /* Announcements */
-    /* .announcements {
-        background-color: #7b1113;
-        margin-top: 6.9em; 
-        padding: 1em;
-        height: 30em;
-        width: 100%;
-    }
-
-    .timeline-container {
-        position: relative; 
-        margin-left: 15em;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 80%;
-        max-width: 600px;
-        padding: 20px;
-        margin-top: 20px; 
-    }
-
-    .timeline-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .timeline-header .time-range {
-        font-size: 1rem;
-        color: #555;
-    }
-
-    .timeline-header .filter-icon {
-        cursor: pointer;
-        font-size: 1.2rem;
-    }
-
-    .announcement {
-        font-size: 1.2rem;
-        color: #333;
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        top: 3em; 
-        left: 30em ; 
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        z-index: 1010;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .dropdown-menu.active {
-        max-height: 500px;
-        opacity: 1;
-        visibility: visible;
-        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    } */
-
-    /* Dropdown menu items */
-    /* .dropdown-menu a {
-        display: block;
-        padding: 10px 20px;
-        text-decoration: none;
-        color: #333;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #f4f4f4;
-    } */
-
     .greetings{
         margin-top: 6.9rem;
         height: 34em;
         width: 100%;
         background-color: #f4f4f4;
         display: flex;
+        
     }
 
     .content {
@@ -524,6 +446,7 @@
 
     .content p{
         padding: 1em;
+        text-align: justify;
     }
 
     .content > * {
@@ -604,15 +527,26 @@
         justify-content: center;
         color: #f4f4f4;
         padding: 2em;
+        text-align: center;
     }
 
     .vision-container > *, .mission-container > *, .goal-container > *{
-        padding: 0.3em;
         font-size: 1.3em;
     }
 
+
     .values h1 {
-        font-size: 2em; 
+        font-size: 2em;
+        position: absolute;
+        top:47em;
+    }
+
+    .values p {
+        margin-top: 2em;
+    }
+    
+    .goal-container p{
+        margin-top: 4.3em;
     }
 
     .mission-container{
