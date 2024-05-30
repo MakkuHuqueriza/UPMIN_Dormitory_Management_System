@@ -743,8 +743,8 @@
    position: absolute;
    top: 1.5em;
    left: 50%;
-   width: 25em; 
-   height: 25em; 
+   width: 22.5em; 
+   height: 22.5em; 
    transform: translateX(-50%); 
    clip-path: circle();
 }
@@ -767,8 +767,8 @@
    left: 50%;
    bottom: 0;
    transform: translateX(-50%);
-   width: 25em; 
-   height: 25em; 
+   width: 22.5em; 
+   height: 22.5em; 
 }
 
 .imgBox img {
