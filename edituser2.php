@@ -9,10 +9,7 @@
     if (!$conn) {
         die("Something went wrong;");
     }
-    
-    // if (!isset($_SESSION["valid"])) {
-    //     header("Location: login.php");
-    // }
+
     $studentnum = urldecode($_GET['studentnum']);
     $stmt = $conn->prepare("SELECT * FROM dormers WHERE studentnum = ?");
     $stmt->bind_param("s", $studentnum);
@@ -27,6 +24,11 @@
         $permitfrom = $_POST["permitfrom"];
         $permitto = $_POST["permitto"];
         $studentnum = $_POST["studentnum"]; // assuming studentnum is passed in the form
+
+        if($paymentmonth == "" || $majoroffense == "" || $minoroffense == "" || $permitfrom == "" || $permitto == "") {
+            echo "<script>alert('Please fill out all fields!'); window.location.href = 'edituser2.php?studentnum=$studentnum';</script>";
+            exit();
+        }
 
         $payment = $paymentmonth * 500;
 
@@ -137,7 +139,7 @@
                         <button type="submit" name="edit" class="btn btn-success">Submit</button>
                     </div>
                     <div class="col-md-auto">
-                        <button type="button" class="btn btn-outline-dark">Back to Home</button>
+                        <a type="button" class="btn btn-outline-dark" href="view_dormer.php" >Back to Home</a>
                     </div>
                     <div class="col" name="output"></div>
                 </div>
