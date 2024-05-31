@@ -155,7 +155,7 @@
                         <button type="submit" name="regis" class="btn btn-success">Submit</button>
                     </div>
                     <div class="col-md-auto">
-                        <a type="button" class="btn btn-outline-dark" href="login.php" >Back to Login</a>
+                        <a type="button" class="btn btn-outline-dark" href="UPDORMITORY/landing.php" >Back to Home</a>
                     </div>
                 </div>
             </form>

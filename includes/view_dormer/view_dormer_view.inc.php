@@ -26,7 +26,7 @@ function show_dormer($results) {
             echo '<td>' . htmlspecialchars($row['minor_offense']) . '</td>';            
             echo '<td>' . htmlspecialchars($row['permit']) . '</td>';
             echo '<td>';
-            echo '<a href="edituser.php?studentnum=' . urlencode($row['studentnum']) . '" class="btn btn-primary btn-sm"><i class="lni lni-pencil-alt"></i></a>';
+            echo '<a href="edituser2.php?studentnum=' . urlencode($row['studentnum']) . '" class="btn btn-primary btn-sm"><i class="lni lni-pencil-alt"></i></a>';
             echo '<button type="button" class="btn btn-danger delete-action btn-sm" onclick="deleteStudent(\'' . $row['studentnum'] . '\')"><i class="lni lni-trash-can"></i></button>';
             echo '</td>';
             echo '</tr>';

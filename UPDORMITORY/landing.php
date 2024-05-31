@@ -48,6 +48,7 @@
             <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
             <li><a href= "#About" ><i class="fa-solid fa-circle-info"></i>About</a></li>
             <li><a href="#" id="profileLink" onclick="showModal()"><i class="fas fa-user"></i>Profile</a></li>
+            <li><a href= "../regis.php" ><i class="fa-regular fa-id-card"></i>Registration</a></li>
         </ul>
 
         <div class="sliderBottomIcons">
