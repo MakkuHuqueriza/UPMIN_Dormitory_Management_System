@@ -18,6 +18,6 @@ function check_login_errors() {
     } else if (isset($_GET['login']) && $_GET['login'] === "success") {
         echo '<br>';
 
-        header("refresh:2;url=/regis.php");
+        header("refresh:2;url=/UPDORMITORY/landing.php");
     }
 }

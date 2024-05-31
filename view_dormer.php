@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="wrapper"">
+    <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex mt-4">
                 <button class="toggle-btn" type="button">
@@ -90,9 +90,11 @@
                                                 <th scope="col">Email Address</th>
                                                 <th scope="col">Phone Number</th>
                                                 <th scope="col">Address</th>
-                                                <th scope="col">Date Created</th>
-                                                <th scope="col">Date Updated</th>
-                                                <th scope="col">Action</th>
+                                                <th scope="col">Payment (PHP)</th>
+                                                <th scope="col">Major Offense</th>
+                                                <th scope="col">Minor Offense</th>                                               
+                                                <th scope="col">Permit</th>
+                                                <th scope="col">Action </th>
                                             </tr>
                                         </thead>
                                         <tbody>
