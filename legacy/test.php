@@ -1,9 +1,5 @@
 <?php
-    // session_start();
-    // include("php/database.php");
-    // if(!isset($_SESSION['valid'])){
-    //     header("Location: login.php");
-    // }
+    include " /includes/config_session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +61,7 @@
                 $_SESSION['output'] = $output;  // Store the output in a session variable
             ?>
             <div class="header-text text-center my-3 mt-4 fs-2">Registration</div>
-            <form action="regis.php" method="post">
+            <form action="includes/registration/registration.inc.php" method="post">
                 <div class="row mb-3">
                     <div class="col-md-8">
                         <div class="input-group">

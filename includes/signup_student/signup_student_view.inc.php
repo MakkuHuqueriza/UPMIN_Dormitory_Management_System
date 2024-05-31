@@ -1,6 +1,6 @@
 <?php
 
-function check_login_errors() {
+function check_signup_errors() {
     if (isset($_SESSION["errors_signup"])){
         $errors = $_SESSION["errors_signup"];
 

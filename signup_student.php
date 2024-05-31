@@ -30,7 +30,7 @@
             </div>
         </div>
 
-    <!-------------------- ------ Right Box ---------------------------->
+    <!-------------------------- Right Box ---------------------------->
         
         <div class="col-md-6 right-box">
             <div class="row align-items-center">
@@ -39,15 +39,15 @@
                     <p>Add Student to the dormitory.</p>
                 </div>
                 <?php
-                    check_login_errors();
+                    check_signup_errors();
                 ?>
                 <form action="includes/signup_student/signup_student.inc.php" method="post">
                     <div class="input-group mb-2">
                         <input type="text" name="student_num" class="form-control form-control-lg bg-light fs-5 mb-3" placeholder="Student Number">
                     </div>
                     <div class="input-group mb-4">
-                        <button name="add_user" class="btn btn-sm btn-outline-success w-100 fs-6 mb-2 ">Add to Server</button>
-                        <button class="btn btn-outline-dark w-100 fs-6 btn-sm">Back to Home</button>
+                        <button name="add_user" class="btn btn-sm btn-outline-success w-100 fs-6 mb-2 " type="submit">Add to Server</button>
+                        <a class="btn btn-outline-dark w-100 fs-6 btn-sm" href="view_dormer.php">Back to Admin</a>
                     </div>
                 </form>
             </div>

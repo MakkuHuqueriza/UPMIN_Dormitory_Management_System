@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } 
 
         if (is_studentnum_taken($pdo, $studentnum)) {
-            $errors["username_taken"] = "Username already taken.";
+            $errors["username_taken"] = "Student number already added.";
         }
 
         require_once "../config_session.inc.php";
@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $pdo = null;
         $stmt = null;
+
+        $_SESSION["adminuser"] = true;
 
         die();
     } catch (PDOException $e) {

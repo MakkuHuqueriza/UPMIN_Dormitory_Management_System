@@ -1,8 +1,8 @@
 -- Table structure for table 'dormers' , preliminary for server.
 
 CREATE TABLE dormers ( 
-    studentnum varchar(10) NOT NULL, 
-    pwd varchar(255) NOT NULL,
+    studentnum VARCHAR(10) NOT NULL, 
+    pwd VARCHAR(255) NOT NULL,
     studentname VARCHAR(255),
     age INT,
     sex VARCHAR(10),
@@ -14,8 +14,12 @@ CREATE TABLE dormers (
     emailadd VARCHAR(255),
     phonenum VARCHAR(255),
     homeaddress VARCHAR(255),
-    create_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
-    update_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    payment DECIMAL(10,2),
+    major_offense INT,
+    minor_offense INT,
+    permit VARCHAR(255);
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
     PRIMARY KEY (studentnum)
 ) 

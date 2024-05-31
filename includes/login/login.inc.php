@@ -41,16 +41,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $newSessionId = session_create_id();
         $sessionId = $newSessionId . "_" . $result["studentnum"];
         session_id($sessionId);
-
+        
         $_SESSION["user_id"] = $result["studentnum"];
         $_SESSION["user_username"] = htmlspecialchars($result["studentnum"]);
+        $_SESSION["valid"] = true;
 
         $_SESSION["last_regeneration"] = time();
 
-        header("Location: /login.php?login=success");
-
         $pdo = null;
         $stmt = null;
+
+        if($studentnum == "admin") {
+
+            header("Location: /view_dormer.php");
+            
+            die();
+        }
+
+        header("Location: /login.php?login=success");
 
         die();
 
